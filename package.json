@@ -1,0 +1,18 @@
+{
+  "name": "yt-cleaner",
+  "version": "1.0.0",
+  "private": true,
+  "description": "YT Cleaner keeps original YouTube titles and can hide notifications, Shorts, comments, related videos, and playlists.",
+  "scripts": {
+    "lint": "eslint . --ext .js",
+    "format": "prettier --write .",
+    "check": "node --check content.js && node --check interceptor.js && node --check popup.js",
+    "validate": "node -e \"const fs=require('fs');const manifest=JSON.parse(fs.readFileSync('manifest.json','utf8'));if (manifest.manifest_version !== 3) throw new Error('Manifest V3 required'); if (!Array.isArray(manifest.content_scripts) || !manifest.content_scripts.length) throw new Error('content_scripts must be defined'); console.log('Manifest OK');\""
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.17.0",
+    "eslint": "^9.17.0",
+    "globals": "^15.14.0",
+    "prettier": "^3.4.2"
+  }
+}

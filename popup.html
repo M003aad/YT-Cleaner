@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <title>YT Cleaner</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <main class="popup">
+    <header class="header">
+      <div class="brand-mark" aria-hidden="true">
+        <img src="icons/icon48.png" alt="logo">
+      </div>
+      <div class="header-copy">
+        <h1>YT Cleaner</h1>
+        <p>A calmer YouTube experience</p>
+      </div>
+      <span class="status-dot" aria-label="Extension active"></span>
+    </header>
+
+    <section class="settings-group" aria-labelledby="titles-heading">
+      <h2 class="group-title" id="titles-heading">TITLE PREFERENCES</h2>
+      <label class="setting setting-featured">
+        <span class="setting-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none">
+            <path d="M4 6.5h16M4 12h11M4 17.5h8" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/>
+            <path d="m18 14 .8 1.7 1.7.8-1.7.8L18 19l-.8-1.7-1.7-.8 1.7-.8L18 14Z" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/>
+          </svg>
+        </span>
+        <span class="setting-copy">
+          <span class="setting-name">Keep original titles</span>
+          <span class="setting-description">Show titles in their original language</span>
+        </span>
+        <span class="toggle">
+          <input id="enabled" type="checkbox" role="switch" aria-label="Keep original titles">
+          <span class="toggle-track" aria-hidden="true"></span>
+        </span>
+      </label>
+    </section>
+
+    <section class="settings-group" aria-labelledby="clean-up-heading">
+      <h2 class="group-title" id="clean-up-heading">CLEAN UP YOUTUBE</h2>
+      <div class="settings-list">
+        <label class="setting">
+          <span class="setting-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none">
+              <path d="M18 9a6 6 0 0 0-12 0c0 7-2 7-2 8.5h16C20 16 18 16 18 9ZM10 21h4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </span>
+          <span class="setting-copy">
+            <span class="setting-name">Hide notifications</span>
+            <span class="setting-description">Remove the notification bell</span>
+          </span>
+          <span class="toggle">
+            <input id="hideNotifications" type="checkbox" role="switch" aria-label="Hide notifications">
+            <span class="toggle-track" aria-hidden="true"></span>
+          </span>
+        </label>
+
+        <label class="setting">
+          <span class="setting-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none">
+              <rect x="5" y="4" width="14" height="16" rx="4" stroke="currentColor" stroke-width="1.7"/>
+              <path d="m10 9 5 3-5 3V9Z" fill="currentColor"/>
+            </svg>
+          </span>
+          <span class="setting-copy">
+            <span class="setting-name">Hide Shorts</span>
+            <span class="setting-description">Hide Shorts shelves and videos</span>
+          </span>
+          <span class="toggle">
+            <input id="hideShorts" type="checkbox" role="switch" aria-label="Hide Shorts">
+            <span class="toggle-track" aria-hidden="true"></span>
+          </span>
+        </label>
+
+        <label class="setting">
+          <span class="setting-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none">
+              <path d="M5 6.5h14v9H11l-4 3v-3H5v-9Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/>
+              <path d="M9 10h6M9 12.5h4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+          </span>
+          <span class="setting-copy">
+            <span class="setting-name">Hide comments</span>
+            <span class="setting-description">Clear comments from watch pages</span>
+          </span>
+          <span class="toggle">
+            <input id="hideComments" type="checkbox" role="switch" aria-label="Hide comments">
+            <span class="toggle-track" aria-hidden="true"></span>
+          </span>
+        </label>
+
+        <label class="setting">
+          <span class="setting-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none">
+              <rect x="4" y="6" width="12" height="12" rx="2" stroke="currentColor" stroke-width="1.7"/>
+              <path d="m16 10 4-2v8l-4-2v-4Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/>
+            </svg>
+          </span>
+          <span class="setting-copy">
+            <span class="setting-name">Hide related videos</span>
+            <span class="setting-description">Remove recommendations and suggestions</span>
+          </span>
+          <span class="toggle">
+            <input id="hideRelated" type="checkbox" role="switch" aria-label="Hide related videos">
+            <span class="toggle-track" aria-hidden="true"></span>
+          </span>
+        </label>
+
+        <label class="setting">
+          <span class="setting-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none">
+              <path d="M4.5 6.5h15v13h-15v-13ZM8 4.5v4M16 4.5v4M4.5 10h15" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="m10 13 4 4m0-4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+          </span>
+          <span class="setting-copy">
+            <span class="setting-name">Hide playlist</span>
+            <span class="setting-description">Hide the playlist queue in the sidebar</span>
+          </span>
+          <span class="toggle">
+            <input id="hidePlaylistSidebar" type="checkbox" role="switch" aria-label="Hide playlist">
+            <span class="toggle-track" aria-hidden="true"></span>
+          </span>
+        </label>
+      </div>
+    </section>
+  </main>
+  <script src="popup.js"></script>
+</body>
+</html>

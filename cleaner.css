@@ -1,0 +1,86 @@
+/* Notification bell */
+html.ytc-hide-notifications ytd-notification-topbar-button-renderer {
+  display: none !important;
+}
+
+/* Comments on watch pages */
+html.ytc-hide-comments #comments {
+  display: none !important;
+}
+
+/* Related videos sidebar and in-player suggestions on watch pages */
+html.ytc-hide-related #related,
+html.ytc-hide-related ytd-watch-next-secondary-results-renderer,
+html.ytc-hide-related .ytp-endscreen-content,
+html.ytc-hide-related .ytp-ce-element,
+html.ytc-hide-related .ytp-suggestion-set,
+html.ytc-hide-related .ytp-videowall-still {
+  display: none !important;
+}
+
+/* Hide the playlist panel and its sidebar wrapper on watch pages. */
+html.ytc-hide-playlist-sidebar ytd-watch-flexy ytd-playlist-panel-renderer,
+html.ytc-hide-playlist-sidebar ytd-watch-flexy[playlist] #playlist,
+html.ytc-hide-playlist-sidebar ytm-watch ytm-playlist-panel-renderer,
+html.ytc-hide-playlist-sidebar ytm-watch[playlist] #playlist,
+html.ytc-hide-playlist-sidebar ytd-watch-flexy #secondary-inner > #persistent-panel-container:has(ytd-playlist-panel-renderer),
+html.ytc-hide-playlist-sidebar ytd-watch-flexy #secondary-inner > #persistent-panel-container:has(#playlist),
+html.ytc-hide-playlist-sidebar ytm-watch #secondary-inner > #persistent-panel-container:has(ytm-playlist-panel-renderer),
+html.ytc-hide-playlist-sidebar ytm-watch #secondary-inner > #persistent-panel-container:has(#playlist),
+html.ytc-hide-playlist-sidebar [data-ytc-playlist-hidden] {
+  display: none !important;
+}
+
+/* Center the player when both watch-page sidebars are hidden. */
+html.ytc-hide-playlist-sidebar.ytc-hide-related ytd-watch-flexy #columns {
+  display: grid !important;
+  grid-template-columns: minmax(0, 1fr) !important;
+}
+
+html.ytc-hide-playlist-sidebar.ytc-hide-related ytd-watch-flexy #primary {
+  grid-column: 1 / -1 !important;
+  justify-self: center !important;
+  width: 100% !important;
+  max-width: 1280px !important;
+  min-width: 0 !important;
+  margin-inline: auto !important;
+}
+
+html.ytc-hide-playlist-sidebar.ytc-hide-related ytd-watch-flexy #secondary {
+  display: none !important;
+}
+
+/* Shorts shelves and individual Shorts entries */
+html.ytc-hide-shorts ytd-rich-shelf-renderer[is-shorts],
+html.ytc-hide-shorts ytd-reel-shelf-renderer,
+html.ytc-hide-shorts ytd-rich-item-renderer:has(a[href*="/shorts/"]),
+html.ytc-hide-shorts ytd-video-renderer:has(a[href*="/shorts/"]),
+html.ytc-hide-shorts ytd-grid-video-renderer:has(a[href*="/shorts/"]),
+html.ytc-hide-shorts ytd-compact-video-renderer:has(a[href*="/shorts/"]),
+html.ytc-hide-shorts ytd-reel-item-renderer:has(a[href*="/shorts/"]),
+html.ytc-hide-shorts ytd-playlist-video-renderer:has(a[href*="/shorts/"]) {
+  display: none !important;
+}
+
+/* Shorts shelves and results in YouTube's newer search layout */
+html.ytc-hide-shorts grid-shelf-view-model,
+html.ytc-hide-shorts ytm-shorts-lockup-view-model,
+html.ytc-hide-shorts ytm-shorts-lockup-view-model-v2,
+html.ytc-hide-shorts yt-lockup-view-model:has(a[href*="/shorts/"]),
+html.ytc-hide-shorts ytd-item-section-renderer:has(> #contents > grid-shelf-view-model),
+html.ytc-hide-shorts ytd-item-section-renderer:has(> #contents > ytd-reel-shelf-renderer) {
+  display: none !important;
+}
+
+/* Shorts links in the full and mini navigation guides */
+html.ytc-hide-shorts ytd-guide-entry-renderer:has(a[href*="/shorts/"]),
+html.ytc-hide-shorts ytd-mini-guide-entry-renderer:has(a[href*="/shorts/"]) {
+  display: none !important;
+}
+
+/* Shorts tabs on channel pages */
+html.ytc-hide-shorts ytd-tab-renderer:has(a[href$="/shorts"]),
+html.ytc-hide-shorts tp-yt-paper-tab:has(a[href$="/shorts"]),
+html.ytc-hide-shorts yt-tab-shape:has(a[href$="/shorts"]) {
+  display: none !important;
+}

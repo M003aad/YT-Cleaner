@@ -1,0 +1,38 @@
+{
+  "manifest_version": 3,
+  "name": "YT Cleaner",
+  "description": "YT Cleaner keeps original YouTube titles and can hide notifications, Shorts, comments, related videos, and playlists.",
+  "version": "1.0.0",
+  "icons": {
+    "16": "icons/icon16.png",
+    "32": "icons/icon32.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "host_permissions": [
+    "*://www.youtube.com/*",
+    "*://m.youtube.com/*"
+  ],
+  "permissions": [
+    "storage"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "YT Cleaner"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://www.youtube.com/*", "*://m.youtube.com/*"],
+      "css": ["cleaner.css"],
+      "js": ["content.js"],
+      "run_at": "document_start",
+      "world": "ISOLATED"
+    },
+    {
+      "matches": ["*://www.youtube.com/*", "*://m.youtube.com/*"],
+      "js": ["interceptor.js"],
+      "run_at": "document_start",
+      "world": "MAIN"
+    }
+  ]
+}
